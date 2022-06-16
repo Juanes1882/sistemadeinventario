@@ -1,0 +1,27 @@
+server:
+  port: 8080 #set your port
+
+# Spring Boot configuration
+spring:
+  application:
+    name: app_ferreteria
+  
+          
+  # Database
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/depositoyferreteriajireth?useSSL=false
+    username: root
+    password: 1035431234
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create # When you launch the application for the first time - switch "none" at "create"
+    show-sql: true
+    #properties hibernate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+    #database-platform: org.hibernate.dialect.MySQL55Dialect
+    open-in-view: false
+    generate-ddl: true
